@@ -1,0 +1,57 @@
+.my-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-btn {
+  cursor: pointer;
+}
+.products-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.item-discription {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+}
+
+.cart-item-con {
+  display: flex;
+  padding: 5px;
+  height: 80px;
+  border: 1px solid gray;
+  margin: 5px;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-count{
+   /* font-size: 20px; */
+   /* padding: 5px; */
+  border-radius: 50%;
+  border: 1px solid red;
+
+
+}
+.cart-count-toatal {
+  font-size: 20px;
+}
+.counter-ele{
+  display: flex;
+  gap:3px
+}
+.cart-t-amount {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.del-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: brown;
+}
