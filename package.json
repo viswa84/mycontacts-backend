@@ -1,0 +1,27 @@
+{
+  "name": "mycontacts-backend",
+  "version": "1.0.0",
+  "description": "ecommerce website testing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viswa84/mycontacts-backend.git"
+  },
+  "author": "vishwanath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viswa84/mycontacts-backend/issues"
+  },
+  "homepage": "https://github.com/viswa84/mycontacts-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "nodeman": "^1.1.2",
+    "nodemon": "^3.0.3"
+  }
+}
