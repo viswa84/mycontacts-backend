@@ -1,16 +1,18 @@
+const asyncHandler = require("express-async-handler");
+
 //@desc all contacts
 //@route get/api/contacts
 //@access public
 
-const getContacts = (req, res) => {
+const getContacts = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Get all contacts" });
-};
+});
 
 //@desc Create new contact
 //@route POST /api/contacts
 //@access public
 
-const CreateContact = (req, res) => {
+const CreateContact = asyncHandler(async (req, res) => {
   console.log(req.body, "this is  the requested body from the client ");
   const { name, email, phone } = req.body;
   if (!name || !email || !phone) {
@@ -18,21 +20,21 @@ const CreateContact = (req, res) => {
     throw new Error("All the fields are Mandatoy !");
   }
   res.status(201).json({ message: "Created Contact" });
-};
+});
 //@desc Contact by Id
 //@route get /api/contacts
 //@access public
 
-const GetContactById = (req, res) => {
+const GetContactById = asyncHandler(async (req, res) => {
   res.status(200).json({ message: `Get ${req.params.id} By Contact` });
-};
+});
 //@desc Update the contact by Id
 //@route put /api/contacts
 //@access public
 
-const UpdatetheContact = (req, res) => {
+const UpdatetheContact = asyncHandler(async (req, res) => {
   res.status(200).json({ message: `Update contact for the ${req.params.id}` });
-};
+});
 
 //@desc delete the contactById
 //@route delete /api/contact
