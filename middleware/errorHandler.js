@@ -2,9 +2,9 @@ const { constants } = require("../constants");
 
 const errorHandler = (err, req, res, next) => {
   const StatusCode = res.statusCode ? res.statusCode : 500;
-
+console.log(StatusCode, "StatusCode")
   switch (StatusCode) {
-    case constants.VALIDATION_ERROR:
+    case 200:
       res.json({
         title: "Not Found",
         message: err.message,
