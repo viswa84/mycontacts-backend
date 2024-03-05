@@ -4,6 +4,8 @@ const errorHandler = (err, req, res, next) => {
   // If the response status code has not been set or is still 200 (OK), default to 500 (Server Error)
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   res.status(statusCode);
+  // console.log(`Error: ${err.message}`); // Log the error message
+  // console.log(`Stack: ${err.stack}`);
 
   console.log(statusCode, "StatusCode");
 

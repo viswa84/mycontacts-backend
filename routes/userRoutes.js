@@ -1,15 +1,17 @@
 const express = require("express");
+const asyncHandler = require("express-async-handler");
+const {
+  registerUser,
+  loginUser,
+  currentUser,
+} = require("../controllers/userController");
 
 const router = express.Router();
 
-router.get("/register", (req, res) => {
-  res.json({ message: "Register the user" });
-});
+router.post("/register", registerUser);
 
-router.get("/login", (req, res) => {
-  res.json({ message: "login user" });
-});
+router.post("/login", loginUser);
 
-router.get("/current", (req, res) => {
-  res.json({ message: "current user infomation" });
-});
+router.post("/current", currentUser);
+
+module.exports = router;
