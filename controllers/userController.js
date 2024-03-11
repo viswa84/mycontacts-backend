@@ -67,6 +67,8 @@ const loginUser = asyncHandler(async (req, res) => {
 //@route Post /api/users/current
 //@access privite
 const currentUser = asyncHandler(async (req, res) => {
+
+  console.log(req.user,"DDDDDDDDDDDDd")
   res.json(req.user);
 });
 
